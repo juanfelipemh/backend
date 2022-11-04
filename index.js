@@ -24,7 +24,7 @@ const app = express();
 
 
 // Middlewares
-/*const dominiosPermitidos = [process.env.FRONTEND_URL];
+const dominiosPermitidos = [process.env.FRONTEND_URL];
 const corsOptions = {
     origin: function(origin, callback){
         if(dominiosPermitidos.indexOf(origin) !== -1){
@@ -34,10 +34,10 @@ const corsOptions = {
             callback(new Error('No permitido por CORS'));
         }
     }
-};*/
+};
 
 //app.use(cors(corsOptions)) 
-app.use(cors()) // Convierte la URL en una instrucción valida para axios
+app.use(cors(corsOptions)) // Convierte la URL en una instrucción valida para axios
 
 app.use(express.json()) // Convertir String en objeto literal JSON
 app.use(bodyParser.json());
