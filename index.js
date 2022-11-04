@@ -36,8 +36,8 @@ const corsOptions = {
 app.use(cors(corsOptions)) // Convierte la URL en una instrucción valida para axios
 
 
-//app.use(bodyParser.json());
-//app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}))
 
 // Routes
 // Creamos la ruta para los productos en la aplicación
