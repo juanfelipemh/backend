@@ -14,7 +14,7 @@ export const consultarProductosCtrl = async (req, res) => {
 export const consultarUnProductoCtrl = async (req, res) => {
     try {
         const unProducto = await Producto.findById(req.params.
-            _id)
+            id)
         res.status(200).send(unProducto)
     } catch (error) {
         console.log(error);        
